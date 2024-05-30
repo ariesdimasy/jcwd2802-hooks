@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import Foo from "./../components/Foo"
 
 export default function Home(){
 
@@ -32,6 +33,8 @@ export default function Home(){
             <div>{counter}</div>
             <button onClick={() => setCounter(counter+1)}> Counter </button>
         </div>
+
+        <Foo bar="hello" fooName={name} fooCounter={counter} />
         
     </div>)
 }
