@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { Button, Heading, Input, Text } from '@chakra-ui/react'
 import Foo from "./../components/Foo"
 
 export default function Home(){
@@ -18,20 +19,20 @@ export default function Home(){
     },[counter, name])
 
     return (<div>
-        <h1>Home</h1>
+        <Text fontSize={'6xl'} >Home</Text>
         
         <hr></hr>
 
-        <h3> Hello , {name}</h3>
+        <Heading as='h3'> Hello , {name}</Heading>
 
         <div>
             <label> name </label>
-            <input type="text" onChange={(e) => {
+            <Input type="text" onChange={(e) => {
                 setName(e.target.value)
             }} value={name}  />
             <button> Change </button>
             <div>{counter}</div>
-            <button onClick={() => setCounter(counter+1)}> Counter </button>
+            <Button colorScheme="blue" onClick={() => setCounter(counter+1)}> Counter</Button>
         </div>
 
         <Foo bar="hello" fooName={name} fooCounter={counter} />

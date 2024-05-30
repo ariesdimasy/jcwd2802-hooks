@@ -24,6 +24,14 @@ export default function Foo(props){
                 <div> Bar children of Foo</div>
                 <h3 color="blue"> Bar children of Foo </h3>
             </Bar>
+            <Bar bar={bar}>
+                <div> Bar children of Foo</div>
+                <h3 color="blue"> Bar children of Foo </h3>
+            </Bar>
+            <Bar bar={bar}>
+                <div> Bar children of Foo</div>
+                <h3 color="blue"> Bar children of Foo </h3>
+            </Bar>
         </div>
     </div>)
 }
